@@ -1,6 +1,11 @@
 import Image from 'next/image'
 
-export default function Home() {
+export const metadata = {
+  title: 'Book Wise | Login',
+  description: 'Faça seu login ou entre como visitante'
+}
+
+export default function Login() {
   return (
     <main className="min-h-screen flex p-5">
       <div className="relative w-[37rem] rounded-xl overflow-hidden">
