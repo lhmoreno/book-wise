@@ -1,4 +1,7 @@
 import './globals.css'
+import '@phosphor-icons/web/regular/style.css'
+import '@phosphor-icons/web/fill/style.css'
+
 import { Nunito_Sans } from 'next/font/google'
 
 const nunitoSans = Nunito_Sans({ 
