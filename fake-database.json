@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "1@email.com",
+      "name": "Luiz Henrique",
+      "avatarUrl": "https://github.com/lhmoreno.png"
+    },
+    {
+      "id": "2",
+      "email": "2@email.com",
+      "name": "Felipe Augusto",
+      "avatarUrl": "https://github.com/fehaugusto.png"
+    },
+    {
+      "id": "3",
+      "email": "3@email.com",
+      "name": "Felipe Assumpção",
+      "avatarUrl": "https://github.com/felipeassumpcaoo.png"
+    }
+  ],
+
+  "authors": [
+    {
+      "id": "1",
+      "name": "J.R.R. Tolkien"
+    },
+    {
+      "id": "2",
+      "name": "Brandon Botosh"
+    },
+    {
+      "id": "3",
+      "name": "Lindsey Philips"
+    }
+  ],
+
+  "books": [
+    {
+      "id": "1",
+      "title": "O Hobbit",
+      "authorId": "1",
+      "description": "Duis irure labore quis elit Lorem ea in voluptate labore eiusmod labore aute occaecat incididunt. Duis irure commodo dolore velit in elit anim ex do ipsum sit commodo anim ut. Ex sit quis ullamco quis mollit sint labore sint. Incididunt mollit dolore enim et ad id consectetur enim nisi ullamco Lorem. Duis elit aute anim voluptate do deserunt ad deserunt. Quis tempor consequat nisi laborum nulla tempor velit laboris consequat amet elit nulla irure. Tempor reprehenderit incididunt et eiusmod ut velit sint exercitation.",
+      "coverUrl": "/fake/book1.png",
+      "rating": 1
+    },
+    {
+      "id": "2",
+      "title": "O guia do mochileiro das galáxias",
+      "authorId": "2",
+      "description": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget.",
+      "coverUrl": "/fake/book2.png",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "title": "Entendendo Algoritmos",
+      "authorId": "3",
+      "description": "Integer at tincidunt sed mi. Venenatis nunc justo porta viverra lacus scelerisque ut orci ultricies. Massa ultrices lacus non lectus pellentesque cras posuere neque. Nunc nisl curabitur et non. Tellus senectus elit porta lorem.",
+      "coverUrl": "/fake/book3.png",
+      "rating": 3
+    }
+  ],
+
+  "assessments": [
+    {
+      "id": "1",
+      "userId": "1",
+      "bookId": "1",
+      "rating": 1,
+      "createAt": "2023-04-21T12:48:19.744Z"
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "bookId": "2",
+      "rating": 5,
+      "createAt": "2023-05-21T18:48:19.744Z"
+    },
+    {
+      "id": "3",
+      "userId": "3",
+      "bookId": "3",
+      "rating": 3,
+      "createAt": "2023-01-21T18:48:19.744Z"
+    }
+  ]
+}
