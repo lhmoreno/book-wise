@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-.assessment-description-ellipsis {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #181C2A;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: #303F73;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #252D4A;
 }
