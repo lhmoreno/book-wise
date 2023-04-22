@@ -1,88 +1,520 @@
 {
   "users": [
     {
-      "id": "1",
-      "email": "1@email.com",
-      "name": "Luiz Henrique",
-      "avatarUrl": "https://github.com/lhmoreno.png"
+      "id": "48e458c0-8b1e-4994-b85a-1e1cfcc9dd60",
+      "name": "Jaxson Dias",
+      "avatar_url": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80"
     },
     {
-      "id": "2",
-      "email": "2@email.com",
-      "name": "Felipe Augusto",
-      "avatarUrl": "https://github.com/fehaugusto.png"
+      "id": "c296c6c0-5c59-40dd-aa8a-ef2b015b7502",
+      "name": "Brandon Botosh",
+      "avatar_url": "https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
     },
     {
-      "id": "3",
-      "email": "3@email.com",
-      "name": "Felipe Assumpção",
-      "avatarUrl": "https://github.com/felipeassumpcaoo.png"
+      "id": "4383f783-6ce1-4f92-b1dd-7a7a693c4aef",
+      "name": "Lindsey Philips",
+      "avatar_url": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+    },
+    {
+      "id": "6624df61-5947-4f8c-9c7e-39c8c40fa158",
+      "name": "Jaylon Franci",
+      "avatar_url": "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
     }
   ],
 
-  "authors": [
+  "categories": [
     {
-      "id": "1",
-      "name": "J.R.R. Tolkien"
+      "name": "Programação",
+      "id": "c9f22067-4978-4a24-84a1-7d37f343dfc2"
     },
     {
-      "id": "2",
-      "name": "Brandon Botosh"
+      "name": "Educação",
+      "id": "f1a50507-0aa7-4245-8a5c-0d0de14e9d6d"
     },
     {
-      "id": "3",
-      "name": "Lindsey Philips"
+      "name": "Ficção",
+      "id": "8c4a4a4d-cbc4-4d2c-bb46-e95b0a536e09"
+    },
+    {
+      "name": "Aventura",
+      "id": "e9c6d3f6-f3ec-4c52-ae28-6adcbab6ee67"
+    },
+    {
+      "name": "Geek",
+      "id": "2e65c193-325a-40c3-98f3-6c13e9b75b02"
+    },
+    {
+      "name": "Alegoria",
+      "id": "a1d0ee25-9c9a-49c8-84eb-7af1e0dd356d"
+    },
+    {
+      "name": "Fábula",
+      "id": "997f8a10-21fb-4c80-bd16-17e8b79a31a3"
+    },
+    {
+      "name": "Romance",
+      "id": "70efc33d-7d6b-4db4-bab6-524c4c4b2e2c"
+    },
+    {
+      "name": "Suspense",
+      "id": "7c8dc74a-2e03-4d72-96de-822e332e5530"
+    },
+    {
+      "name": "Autoajuda",
+      "id": "a4d63d4e-f8ad-4a60-b7b9-9d925a2a8a92"
+    },
+    {
+      "name": "Arquitetura",
+      "id": "a2891eaa-6d9e-48d8-a86a-10aa017d3d3f"
+    },
+    {
+      "name": "Terror",
+      "id": "a0a61b53-37d7-48ec-9b92-6db074f6d9c9"
     }
   ],
 
   "books": [
     {
-      "id": "1",
-      "title": "O Hobbit",
-      "authorId": "1",
-      "description": "Duis irure labore quis elit Lorem ea in voluptate labore eiusmod labore aute occaecat incididunt. Duis irure commodo dolore velit in elit anim ex do ipsum sit commodo anim ut. Ex sit quis ullamco quis mollit sint labore sint. Incididunt mollit dolore enim et ad id consectetur enim nisi ullamco Lorem. Duis elit aute anim voluptate do deserunt ad deserunt. Quis tempor consequat nisi laborum nulla tempor velit laboris consequat amet elit nulla irure. Tempor reprehenderit incididunt et eiusmod ut velit sint exercitation.",
-      "coverUrl": "/fake/book1.png",
-      "rating": 1
+      "id": "c8176d86-896a-4c21-9219-6bb28cccaa5f",
+      "name": "14 Hábitos de Desenvolvedores Altamente Produtivos",
+      "author": "Zeno Rocha",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/14-habitos-de-desenvolvedores-altamente-produtivos.png",
+      "total_pages": 160,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Educação",
+          "id": "f1a50507-0aa7-4245-8a5c-0d0de14e9d6d"
+        },
+        {
+          "name": "Programação",
+          "id": "c9f22067-4978-4a24-84a1-7d37f343dfc2"
+        }
+      ]
     },
     {
-      "id": "2",
-      "title": "O guia do mochileiro das galáxias",
-      "authorId": "2",
-      "description": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget.",
-      "coverUrl": "/fake/book2.png",
-      "rating": 5
+      "id": "375948a7-bca3-4b59-9f97-bfcde036b4ca",
+      "name": "O Hobbit",
+      "author": "J.R.R. Tolkien",
+      "summary": "Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh",
+      "cover_url": "/images/books/o-hobbit.png",
+      "total_pages": 360,
+      "rate_length": 2,
+      "rate_average": 4.5,
+      "categories": [
+        {
+          "name": "Ficção",
+          "id": "8c4a4a4d-cbc4-4d2c-bb46-e95b0a536e09"
+        },
+        {
+          "name": "Aventura",
+          "id": "e9c6d3f6-f3ec-4c52-ae28-6adcbab6ee67"
+        }
+      ]
     },
     {
-      "id": "3",
-      "title": "Entendendo Algoritmos",
-      "authorId": "3",
-      "description": "Integer at tincidunt sed mi. Venenatis nunc justo porta viverra lacus scelerisque ut orci ultricies. Massa ultrices lacus non lectus pellentesque cras posuere neque. Nunc nisl curabitur et non. Tellus senectus elit porta lorem.",
-      "coverUrl": "/fake/book3.png",
-      "rating": 3
+      "id": "86596503-369b-4614-bacf-11c9bb73e779",
+      "name": "O guia do mochileiro das galáxias",
+      "author": "Douglas Adams",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/o-guia-do-mochileiro-das-galaxias.png",
+      "total_pages": 250,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Ficção",
+          "id": "8c4a4a4d-cbc4-4d2c-bb46-e95b0a536e09"
+        },
+        {
+          "name": "Geek",
+          "id": "2e65c193-325a-40c3-98f3-6c13e9b75b02"
+        }
+      ]
+    },
+    {
+      "id": "d0d70b05-d48f-4d83-b1e8-0b4dd984c97d",
+      "name": "A revolução dos bichos",
+      "author": "George Orwell",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/a-revolucao-dos-bichos.png",
+      "total_pages": 350,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Alegoria",
+          "id": "a1d0ee25-9c9a-49c8-84eb-7af1e0dd356d"
+        },
+        {
+          "name": "Fábula",
+          "id": "997f8a10-21fb-4c80-bd16-17e8b79a31a3"
+        }
+      ]
+    },
+    {
+      "id": "48b86ac2-014e-401d-bcbb-331ce5f4a457",
+      "name": "O fim da eternidade",
+      "author": "Isaac Asimov",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/o-fim-da-eternidade.png",
+      "total_pages": 165,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Ficção",
+          "id": "8c4a4a4d-cbc4-4d2c-bb46-e95b0a536e09"
+        },
+        {
+          "name": "Romance",
+          "id": "70efc33d-7d6b-4db4-bab6-524c4c4b2e2c"
+        }
+      ]
+    },
+    {
+      "id": "e688c24f-d14d-4607-a12e-90e6e367398d",
+      "name": "Entendendo Algoritmos",
+      "author": "Aditya Y. Bhargava",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/entendendo-algoritmos.png",
+      "total_pages": 165,
+      "rate_length": 1,
+      "rate_average": 5,
+      "categories": [
+        {
+          "name": "Programação",
+          "id": "c9f22067-4978-4a24-84a1-7d37f343dfc2"
+        },
+        {
+          "name": "Educação",
+          "id": "f1a50507-0aa7-4245-8a5c-0d0de14e9d6d"
+        }
+      ]
+    },
+    {
+      "id": "0440ad7d-230e-4573-b455-84ca38b5d339",
+      "name": "Código Limpo",
+      "author": "Robert C. Martin",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/codigo-limpo.png",
+      "total_pages": 365,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Programação",
+          "id": "c9f22067-4978-4a24-84a1-7d37f343dfc2"
+        },
+        {
+          "name": "Educação",
+          "id": "f1a50507-0aa7-4245-8a5c-0d0de14e9d6d"
+        }
+      ]
+    },
+    {
+      "id": "14f410df-b28a-4e72-b1b4-363e26e160dd",
+      "name": "O poder do hábito",
+      "author": "Charles Duhigg",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/o-poder-do-habito.png",
+      "total_pages": 288,
+      "rate_length": 1,
+      "rate_average": 5,
+      "categories": [
+        {
+          "name": "Autoajuda",
+          "id": "a4d63d4e-f8ad-4a60-b7b9-9d925a2a8a92"
+        },
+        {
+          "name": "Educação",
+          "id": "f1a50507-0aa7-4245-8a5c-0d0de14e9d6d"
+        }
+      ]
+    },
+    {
+      "id": "d2870ad0-3312-4ac2-af9f-76af6565587d",
+      "name": "Arquitetura limpa",
+      "author": "Robert C. Martin",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/arquitetura-limpa.png",
+      "total_pages": 288,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Programação",
+          "id": "c9f22067-4978-4a24-84a1-7d37f343dfc2"
+        },
+        {
+          "name": "Educação",
+          "id": "f1a50507-0aa7-4245-8a5c-0d0de14e9d6d"
+        }
+      ]
+    },
+    {
+      "id": "4fd2b389-b211-40b5-9797-f78cbb985645",
+      "name": "Histórias extraordinárias",
+      "author": "Edgar Allan Poe",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/historias-extraordinarias.png",
+      "total_pages": 332,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Ficção",
+          "id": "8c4a4a4d-cbc4-4d2c-bb46-e95b0a536e09"
+        },
+        {
+          "name": "Suspense",
+          "id": "7c8dc74a-2e03-4d72-96de-822e332e5530"
+        }
+      ]
+    },
+    {
+      "id": "6de9f6b8-5ff4-4e06-b9f4-843eca462803",
+      "name": "Refatoração",
+      "author": "Martin Fowler",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/refatoracao.png",
+      "total_pages": 332,
+      "rate_length": 1,
+      "rate_average": 5,
+      "categories": [
+        {
+          "name": "Programação",
+          "id": "c9f22067-4978-4a24-84a1-7d37f343dfc2"
+        },
+        {
+          "name": "Educação",
+          "id": "f1a50507-0aa7-4245-8a5c-0d0de14e9d6d"
+        }
+      ]
+    },
+    {
+      "id": "d0590f9a-dd89-42fd-9bbb-bf26c2e4dcf9",
+      "name": "Domain-Driven Design",
+      "author": "Eric Evans",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/domain-driven-design.png",
+      "total_pages": 288,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Programação",
+          "id": "c9f22067-4978-4a24-84a1-7d37f343dfc2"
+        },
+        {
+          "name": "Arquitetura",
+          "id": "a2891eaa-6d9e-48d8-a86a-10aa017d3d3f"
+        }
+      ]
+    },
+    {
+      "id": "1d5cdbdc-b90f-40d5-8fe9-d4923ae12dbd",
+      "name": "Viagem ao Centro da Terra",
+      "author": "Julio Verne",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/viagem-ao-centro-da-terra.png",
+      "total_pages": 288,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Romance",
+          "id": "70efc33d-7d6b-4db4-bab6-524c4c4b2e2c"
+        },
+        {
+          "name": "Ficção",
+          "id": "8c4a4a4d-cbc4-4d2c-bb46-e95b0a536e09"
+        }
+      ]
+    },
+    {
+      "id": "404e47f8-da53-44fd-ab53-37ed171c3a9f",
+      "name": "Fragmentos do Horror",
+      "author": "Junji Ito",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/fragmentos-do-horror.png",
+      "total_pages": 144,
+      "rate_length": 1,
+      "rate_average": 5,
+      "categories": [
+        {
+          "name": "Ficção",
+          "id": "8c4a4a4d-cbc4-4d2c-bb46-e95b0a536e09"
+        },
+        {
+          "name": "Terror",
+          "id": "a0a61b53-37d7-48ec-9b92-6db074f6d9c9"
+        }
+      ]
+    },
+    {
+      "id": "66cb0f47-7e20-4492-b640-9c020fcae6f2",
+      "name": "O Programador Pragmático",
+      "author": "Andrew Hunt",
+      "summary": "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "cover_url": "/images/books/o-programador-pragmatico.png",
+      "total_pages": 205,
+      "rate_length": 1,
+      "rate_average": 4,
+      "categories": [
+        {
+          "name": "Programação",
+          "id": "c9f22067-4978-4a24-84a1-7d37f343dfc2"
+        },
+        {
+          "name": "Educação",
+          "id": "f1a50507-0aa7-4245-8a5c-0d0de14e9d6d"
+        }
+      ]
     }
   ],
 
-  "assessments": [
+  "ratings": [
     {
-      "id": "1",
-      "userId": "1",
-      "bookId": "1",
-      "rating": 1,
-      "createAt": "2023-04-21T12:48:19.744Z"
+      "id": "887a2318-ea0e-4861-b411-5da82a49cfd3",
+      "rate": 4,
+      "description":
+        "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "bookId": "375948a7-bca3-4b59-9f97-bfcde036b4ca",
+      "userId": "48e458c0-8b1e-4994-b85a-1e1cfcc9dd60",
+      "created_at": "2023-03-22T12:37:25.733Z"
     },
     {
-      "id": "2",
-      "userId": "2",
-      "bookId": "2",
-      "rating": 5,
-      "createAt": "2023-05-21T18:48:19.744Z"
+      "id": "fec9fe9a-df82-49d0-8c2d-890deb0dc96e",
+      "rate": 4,
+      "description": "Nec tempor nunc in egestas.",
+      "bookId": "86596503-369b-4614-bacf-11c9bb73e779",
+      "userId": "c296c6c0-5c59-40dd-aa8a-ef2b015b7502",
+      "created_at": "2023-04-21T11:52:25.733Z"
     },
     {
-      "id": "3",
-      "userId": "3",
-      "bookId": "3",
-      "rating": 3,
-      "createAt": "2023-01-21T18:48:19.744Z"
+      "id": "905e9024-63d0-433e-bfa9-a143827ffef7",
+      "rate": 5,
+      "description":
+        "Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh",
+      "bookId": "e688c24f-d14d-4607-a12e-90e6e367398d",
+      "userId": "4383f783-6ce1-4f92-b1dd-7a7a693c4aef",
+      "created_at": "2023-04-22T12:37:25.733Z"
+    },
+    {
+      "id": "ed802b60-ed8b-4f59-acce-854651c5f48e",
+      "rate": 4,
+      "description":
+        "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "bookId": "48b86ac2-014e-401d-bcbb-331ce5f4a457",
+      "userId": "48e458c0-8b1e-4994-b85a-1e1cfcc9dd60",
+      "created_at": "2023-04-17T20:42:25.733Z"
+    },
+    {
+      "id": "194ba1ed-89cd-4cf5-99e9-0adb5ba82479",
+      "rate": 4,
+      "description": "Nec tempor nunc in egestas.",
+      "bookId": "d0d70b05-d48f-4d83-b1e8-0b4dd984c97d",
+      "userId": "c296c6c0-5c59-40dd-aa8a-ef2b015b7502",
+      "created_at": "2023-04-22T08:37:25.733Z"
+    },
+    {
+      "id": "f0321e7f-f663-4d7c-b90b-bf6cab962ad4",
+      "rate": 5,
+      "description":
+        "Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh",
+      "bookId": "375948a7-bca3-4b59-9f97-bfcde036b4ca",
+      "userId": "4383f783-6ce1-4f92-b1dd-7a7a693c4aef",
+      "created_at": "2023-04-22T10:37:25.733Z"
+    },
+    {
+      "id": "1569cb24-5778-4d95-8aed-20b32c315edf",
+      "rate": 4,
+      "description":
+        "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "bookId": "c8176d86-896a-4c21-9219-6bb28cccaa5f",
+      "userId": "48e458c0-8b1e-4994-b85a-1e1cfcc9dd60",
+      "created_at": "2023-04-19T12:37:25.733Z"
+    },
+    {
+      "id": "b8f494ee-3511-45d1-8708-0ddb8504970d",
+      "rate": 4,
+      "description": "Nec tempor nunc in egestas.",
+      "bookId": "0440ad7d-230e-4573-b455-84ca38b5d339",
+      "userId": "c296c6c0-5c59-40dd-aa8a-ef2b015b7502",
+      "created_at": "2023-03-19T15:37:25.733Z"
+    },
+    {
+      "id": "c2f45788-40e1-47e1-8b7b-d15ae4703c97",
+      "rate": 5,
+      "description":
+        "Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh",
+      "bookId": "14f410df-b28a-4e72-b1b4-363e26e160dd",
+      "userId": "4383f783-6ce1-4f92-b1dd-7a7a693c4aef",
+      "created_at": "2023-04-21T19:37:25.733Z"
+    },
+    {
+      "id": "1851840e-5d32-481a-a8c9-d3c8785100c4",
+      "rate": 4,
+      "description":
+        "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "bookId": "d2870ad0-3312-4ac2-af9f-76af6565587d",
+      "userId": "48e458c0-8b1e-4994-b85a-1e1cfcc9dd60",
+      "created_at": "2023-04-21T21:00:25.733Z"
+    },
+    {
+      "id": "3a3799cc-7ba2-487f-b4a2-af98c71b386a",
+      "rate": 4,
+      "description": "Nec tempor nunc in egestas.",
+      "bookId": "4fd2b389-b211-40b5-9797-f78cbb985645",
+      "userId": "c296c6c0-5c59-40dd-aa8a-ef2b015b7502",
+      "created_at": "2023-04-22T12:30:25.733Z"
+    },
+    {
+      "id": "6ee2ea12-74fc-44c7-abee-a9dae990e763",
+      "rate": 5,
+      "description":
+        "Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh",
+      "bookId": "6de9f6b8-5ff4-4e06-b9f4-843eca462803",
+      "userId": "4383f783-6ce1-4f92-b1dd-7a7a693c4aef",
+      "created_at": "2023-04-21T12:10:25.733Z"
+    },
+    {
+      "id": "34d1ebe1-d881-4f9a-9468-c84238a457a2",
+      "rate": 4,
+      "description":
+        "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "bookId": "d0590f9a-dd89-42fd-9bbb-bf26c2e4dcf9",
+      "userId": "48e458c0-8b1e-4994-b85a-1e1cfcc9dd60",
+      "created_at": "2023-04-22T11:35:25.733Z"
+    },
+    {
+      "id": "331d05a3-f1b1-45f1-8f84-a9602890b3ef",
+      "rate": 4,
+      "description": "Nec tempor nunc in egestas.",
+      "bookId": "1d5cdbdc-b90f-40d5-8fe9-d4923ae12dbd",
+      "userId": "c296c6c0-5c59-40dd-aa8a-ef2b015b7502",
+      "created_at": "2023-04-12T12:37:25.733Z"
+    },
+    {
+      "id":"ce2f697c-61e6-4706-bbf2-03243a43b58f",
+      "rate": 5,
+      "description":
+        "Semper et sapien proin vitae nisi. Feugiat neque integer donec et aenean posuere amet ultrices. Cras fermentum id pulvinar varius leo a in. Amet libero pharetra nunc elementum fringilla velit ipsum. Sed vulputate massa velit nibh",
+      "bookId": "404e47f8-da53-44fd-ab53-37ed171c3a9f",
+      "userId": "4383f783-6ce1-4f92-b1dd-7a7a693c4aef",
+      "created_at": "2023-02-22T12:37:25.733Z"
+    },
+    {
+      "id": "8fec49b0-8f67-446a-a3d8-289316f82c6d",
+      "rate": 4,
+      "description":
+        "Nec tempor nunc in egestas. Euismod nisi eleifend at et in sagittis. Penatibus id vestibulum imperdiet a at imperdiet lectus leo. Sit porta eget nec vitae sit vulputate eget",
+      "bookId": "66cb0f47-7e20-4492-b640-9c020fcae6f2",
+      "userId": "48e458c0-8b1e-4994-b85a-1e1cfcc9dd60",
+      "created_at": "2023-04-22T12:27:25.733Z"
     }
   ]
 }
