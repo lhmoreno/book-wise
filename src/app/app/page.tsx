@@ -1,61 +1,66 @@
-import Image from "next/image"
-import Link from "next/link"
-import RatingStars from "@/components/RatingStars"
+import Image from 'next/image'
+import Link from 'next/link'
+import RateStars from '@/components/RateStars'
+import { formatDistance, formatDistanceToNow } from 'date-fns'
+import { ptBR } from 'date-fns/locale'
+
+interface User {
+  id: string
+  name: string
+  avatar_url: string
+}
+
+interface Category {
+  id: string
+  name: string
+}
+
+interface Book {
+  id: string
+  name: string
+  author: string
+  summary: string
+  cover_url: string
+  total_pages: number
+  rate_length: number
+  rate_average: number
+  categories: Category[]
+}
+
+interface Rating {
+  id: string
+  rate: 0 | 1 | 2 | 3 | 4 | 5
+  description: string
+  created_at: string
+  book: Book
+  user: User
+}
 
 export const metadata = {
   title: 'Book Wise | Início',
   description: 'Encontre os melhores livros do planeta aqui'
 }
 
-async function getAssessments() {
-  const fetchAssessments = await fetch('http://localhost:4000/assessments?_expand=user', {
+async function getRatings() {
+  const res = await fetch('http://localhost:4000/ratings?_expand=user&_expand=book&_sort=created_at&_order=desc', {
     cache: 'no-store'
   })
-  const resAssessments = await fetchAssessments.json() as any[]
-  
-  const promises = resAssessments.map(async (assessment) => {
-    const fetchBook = await fetch(`http://localhost:4000/books/${assessment.bookId}?_expand=author`, {
-      cache: 'no-store'
-    })
-    const resBook = await fetchBook.json()
 
-    return {
-      id: assessment.id,
-      createAt: assessment.createAt,
-      rating: assessment.rating,
-      user: assessment.user,
-      book: {
-        id: resBook.id,
-        title: resBook.title,
-        description: resBook.description,
-        coverUrl: resBook.coverUrl,
-        author: resBook.author
-      }
-    }
-  })
-  
-  const assessments = await Promise.all(promises)
+  const ratings = await res.json() as Rating[]
 
-  return assessments as Assessment[]
+  return ratings
 }
 
 async function getPopularBooks() {
-  const res = await fetch('http://localhost:4000/books?_expand=author&_sort=rating&_order=desc')
-  const data = await res.json() as Book[]
+  const res = await fetch('http://localhost:4000/books?_sort=rate_length&_order=desc&_limit=5')
+  
+  const books = await res.json() as Book[]
 
-  const books = data.map(book => ({
-    id: book.id,
-    title: book.title,
-    rating: book.rating,
-    coverUrl: book.coverUrl,
-    author: book.author
-  }))
-
-  return books as Book[]
+  return books
 }
 
 export default async function Home() {
-  const [assessments, popularBooks] = await Promise.all([getAssessments(), getPopularBooks()])
+  const [ratings, popularBooks] = await Promise.all([getRatings(), getPopularBooks()])
 
   return (
     <div>
@@ -64,18 +69,23 @@ export default async function Home() {
         Início
       </header>
 
-      <main className="mt-10 flex gap-24">
+      <main className="mt-10 flex justify-between gap-14">
         <div>
           <p className="text-sm">Avaliações mais recentes</p>
 
-          <div className="mt-4 flex flex-col gap-3 w-[38rem]">
-            {assessments.map(assessment => {
+          <div className="mt-4 flex flex-col gap-3 max-w-[38rem]">
+            {ratings.map(rating => {
+              const distance = formatDistanceToNow(new Date(rating.created_at), {
+                locale: ptBR,
+                addSuffix: true
+              })
+
               return (
-                <div key={assessment.id} className="h-[17.5rem] bg-gray-700 rounded-lg p-6">
+                <div key={rating.id} className="h-[17.5rem] bg-gray-700 rounded-lg p-6">
                   <header className="flex gap-4">
                     <div className="rounded-full overflow-hidden w-10 h-10 p-px bg-gradient-vertical">
                       <Image 
-                        src={assessment.user.avatarUrl}
+                        src={rating.user.avatar_url}
                         alt=""
                         className="rounded-full"
                         width={40}
@@ -84,25 +94,27 @@ export default async function Home() {
                       />
                     </div>
                     <div>
-                      <p>{assessment.user.name}</p>
-                      <p className="text-sm text-gray-400">{assessment.createAt}</p>
+                      <p>{rating.user.name}</p>
+                      <p className="text-sm text-gray-400">{distance}</p>
                     </div>
-                    <RatingStars rating={assessment.rating} className="ml-auto"/>
+                    <RateStars rate={rating.rate} className="ml-auto"/>
                   </header>
 
                   <main className="mt-8 flex gap-5">
-                    <Image 
-                      src={assessment.book.coverUrl}
-                      alt=""
-                      className="rounded"
-                      width={108}
-                      height={152}
-                      priority
-                    />
-                    <div>
-                      <strong>{assessment.book.title}</strong>
-                      <p className="text-sm text-gray-400">{assessment.book.author.name}</p>
-                      <p className="mt-5 text-gray-300 assessment-description-ellipsis">{assessment.book.description}</p>
+                    <div className="w-[6.75rem] h-[9.5rem]">
+                      <Image 
+                        src={rating.book.cover_url}
+                        alt=""
+                        className="w-auto h-auto rounded"
+                        width={108}
+                        height={152}
+                        priority
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <strong>{rating.book.name}</strong>
+                      <p className="text-sm text-gray-400">{rating.book.author}</p>
+                      <p className="mt-5 text-gray-300 line-clamp-3">{rating.book.summary}</p>
                     </div>
                   </main>
                 </div>
@@ -112,30 +124,32 @@ export default async function Home() {
         </div>
 
         <div>
-          <div className="flex justify-between">
+          <div className="flex items-center justify-between">
             <p className="text-sm">Livros populares</p>
-            <Link href="#" className="px-2 py-1 text-sm text-purple-100 font-bold flex items-center gap-2">
+            <Link href="/app" className="px-2 py-1 text-sm text-purple-100 font-bold flex items-center gap-2">
               Ver todos
               <i className="ph ph-caret-right w-4 h-4" />
             </Link>
           </div>
 
-          <div className="mt-4 flex flex-col gap-3">
+          <div className="mt-4 flex flex-col gap-3 max-w-xs">
             {popularBooks.map(book => {
               return (
                 <div key={book.id} className="bg-gray-700 rounded-lg px-5 py-4 flex gap-5">
-                  <Image 
-                    src={book.coverUrl}
-                    alt=""
-                    className="rounded"
-                    width={64}
-                    height={94}
-                    priority
-                  />
-                  <div className="flex flex-col">
-                    <strong>{book.title}</strong>
-                    <p className="text-sm text-gray-400">{book.author.name}</p>
-                    <RatingStars rating={book.rating} className="mt-auto" />
+                  <div className="w-[4.125rem] h-[5.875rem]">
+                    <Image 
+                      src={book.cover_url}
+                      alt=""
+                      className="w-auto h-auto rounded"
+                      width={66}
+                      height={94}
+                      priority
+                    />
+                  </div>
+                  <div className="flex-1 flex flex-col">
+                    <strong className="h-12 line-clamp-2">{book.name}</strong>
+                    <p className="text-sm text-gray-400">{book.author}</p>
+                    <RateStars rate={book.rate_average} className="mt-auto" />
                   </div>
                 </div>
               )

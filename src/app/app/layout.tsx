@@ -6,10 +6,10 @@ export default function AppLayout({
   children: React.ReactNode
 }) {
   return (
-    <div className="pl-[21rem] pr-24 flex">
+    <div className="max-w-screen-2xl mx-auto flex">
       <Sidebar />
 
-      <div className="w-full py-16">
+      <div className="flex-1 mx-24 my-16">
         {children}
       </div>
     </div>
