@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@phosphor-icons/react": "^2.0.8",
     "@phosphor-icons/web": "^2.0.3",
     "@radix-ui/react-dialog": "^1.0.3",
     "@types/node": "18.15.12",

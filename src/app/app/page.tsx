@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import RateStars from '@/components/RateStars'
-import { formatDistance, formatDistanceToNow } from 'date-fns'
+import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 
 interface User {
@@ -101,16 +101,13 @@ export default async function Home() {
                   </header>
 
                   <main className="mt-8 flex gap-5">
-                    <div className="w-[6.75rem] h-[9.5rem]">
-                      <Image 
-                        src={rating.book.cover_url}
-                        alt=""
-                        className="w-auto h-auto rounded"
-                        width={108}
-                        height={152}
-                        priority
-                      />
-                    </div>
+                    <Image 
+                      src={rating.book.cover_url}
+                      alt=""
+                      className="rounded"
+                      width={107}
+                      height={150}
+                    />
                     <div className="flex-1">
                       <strong>{rating.book.name}</strong>
                       <p className="text-sm text-gray-400">{rating.book.author}</p>
@@ -136,16 +133,13 @@ export default async function Home() {
             {popularBooks.map(book => {
               return (
                 <div key={book.id} className="bg-gray-700 rounded-lg px-5 py-4 flex gap-5">
-                  <div className="w-[4.125rem] h-[5.875rem]">
-                    <Image 
-                      src={book.cover_url}
-                      alt=""
-                      className="w-auto h-auto rounded"
-                      width={66}
-                      height={94}
-                      priority
-                    />
-                  </div>
+                  <Image 
+                    src={book.cover_url}
+                    alt=""
+                    className="rounded"
+                    width={66}
+                    height={92}
+                  />
                   <div className="flex-1 flex flex-col">
                     <strong className="h-12 line-clamp-2">{book.name}</strong>
                     <p className="text-sm text-gray-400">{book.author}</p>

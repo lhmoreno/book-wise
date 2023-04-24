@@ -19,12 +19,11 @@ export default function Login() {
           />
         </div>
         <Image 
-          src="/background-login.png"
+          src="/images/backgrounds/background-login.png"
           alt=""
           className="h-full object-cover"
           width={598}
           height={912}
-          priority
         />
       </div>
 

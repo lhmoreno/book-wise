@@ -1,6 +1,5 @@
 'use client'
 
-import { X } from '@phosphor-icons/react'
 import * as Dialog from '@radix-ui/react-dialog'
 import Image from 'next/image'
 
@@ -45,8 +44,8 @@ export default function DialogLogin({ description, children }: DialogLoginProps)
             </button>
           </div>
           <Dialog.Close asChild>
-            <button className="absolute top-0 right-0 w-6 h-6 m-4 text-gray-400 transition-colors hover:text-gray-200" aria-label="Close">
-              <X className="w-full h-full" />
+            <button className="absolute top-0 right-0 m-4 text-gray-400 transition-colors hover:text-gray-200" aria-label="Close">
+              <i className="ph ph-x text-2xl" />
             </button>
           </Dialog.Close>
         </Dialog.Content>

@@ -1,6 +1,5 @@
 'use client'
 
-import { Binoculars, ChartLineUp, SignIn, SignOut, User, X } from '@phosphor-icons/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -35,16 +34,16 @@ export default function Sidebar() {
 
           <nav className="mt-16 flex flex-col gap-4">
             <Link href="/app" className={classNameLink(pathname === '/app')}>
-              <ChartLineUp className="w-6 h-6" />
+              <i className="ph ph-chart-line-up text-2xl" />
               Início
             </Link>
             <Link href="/app/books" className={classNameLink(pathname === '/app/books')}>
-              <Binoculars className="w-6 h-6" />
+              <i className="ph ph-binoculars text-2xl" />
               Explorar
             </Link>
             {authenticated && (
               <Link href="/app/profile" className={classNameLink(pathname === '/app/profile')}>
-                <User className="w-6 h-6" />
+                <i className="ph ph-user text-2xl" />
                 Perfil
               </Link>
             )}
@@ -61,11 +60,10 @@ export default function Sidebar() {
                       className="rounded-full"
                       width={32}
                       height={32}
-                      priority
                     />
                   </div>
                   Luiz Henrique
-                  <SignOut className="text-red-100 w-5 h-5" />
+                  <i className="ph ph-sign-out text-red-100 text-xl" />
                 </button>
               </Dialog.Trigger>
               <Dialog.Portal>
@@ -79,8 +77,8 @@ export default function Sidebar() {
                     Sair
                   </button>
                   <Dialog.Close asChild>
-                    <button className="absolute top-0 right-0 w-6 h-6 m-4 text-gray-400 transition-colors hover:text-gray-200" aria-label="Close">
-                      <X className="w-full h-full" />
+                    <button className="absolute top-0 right-0 m-4 text-gray-400 transition-colors hover:text-gray-200" aria-label="Close">
+                      <i className="ph ph-x text-2xl" />
                     </button>
                   </Dialog.Close>
                 </Dialog.Content>
@@ -90,18 +88,17 @@ export default function Sidebar() {
             <DialogLogin>
               <button className="mt-auto mb-4 p-2 flex items-center gap-3 text-gray-200 font-bold transition-opacity hover:opacity-80">
                 Fazer login
-                <SignIn className="text-green-100 w-5 h-5" />
+                <i className="ph ph-sign-in text-green-100 text-xl" />
               </button>
             </DialogLogin>
           )}
         </div>
         <Image 
-          src="/background-sidebar.png"
+          src="/images/backgrounds/background-sidebar.png"
           alt=""
           className="w-full h-full object-cover"
           width={232}
           height={988}
-          priority
         />
       </div>
     </div>
