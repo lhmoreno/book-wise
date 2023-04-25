@@ -1,22 +1,10 @@
-import Image from 'next/image'
-import RateStars from '@/components/RateStars'
 import Link from 'next/link'
+import Book from '@/components/Book'
 
-interface Category {
-  id: string
-  name: string
-}
-
-interface Book {
-  id: string
-  name: string
-  author: string
-  summary: string
-  cover_url: string
-  total_pages: number
-  rate_length: number
-  rate_average: number
-  categories: Category[]
+interface PageProps {
+  searchParams: {
+    [param: string]: string | string [] | undefined
+  }
 }
 
 export const metadata = {
@@ -24,14 +12,26 @@ export const metadata = {
   description: 'Veja um perfil'
 }
 
-async function getBooks() {
+function stylesLinkActive(active?: boolean) {
+  if (active) {
+    return 'px-4 py-1 bg-purple-200 rounded-full flex items-center justify-center'
+  } else {
+    return 'px-4 py-1 text-purple-100 border border-purple-100 rounded-full flex items-center justify-center'
+  }
+}
+
+async function getBooks(categories?: string[]) {
   const res = await fetch('http://localhost:4000/books', {
     cache: 'no-store'
   })
 
-  const books = await res.json() as Book[]
+  const books = await res.json() as tBook[]
 
-  return books
+  if (!categories) return books
+
+  const filteredBooks = books.filter(book => book.categories.find(category => categories.includes(category.slug)))
+
+  return filteredBooks
 }
 
 async function getCategories() {
@@ -39,13 +39,16 @@ async function getCategories() {
     cache: 'no-store'
   })
 
-  const categories = await res.json() as Category[]
+  const categories = await res.json() as tCategory[]
 
   return categories
 }
 
-export default async function Books() {
-  const [books, categories] = await Promise.all([getBooks(), getCategories()])
+export default async function Books({ searchParams }: PageProps) {
+  const categoryParams = typeof searchParams.category === 'string' ? [searchParams.category] : searchParams.category
+  const [books, categories] = await Promise.all([getBooks(categoryParams), getCategories()])
+  
+  const baseUrl = !categoryParams ? '/app/books' : `/app/books${categoryParams.map((c, i) => `${i === 0 ? '?' : '&'}category=${c}`).join('')}`
 
   return (
     <div>
@@ -68,19 +71,22 @@ export default async function Books() {
       <main className="mt-10">
         <div className="flex gap-3 flex-wrap">
           <Link
-            href="/app/explore"
+            href="/app/books"
             prefetch={false}
-            className="px-4 py-1 bg-purple-200 rounded-full flex items-center justify-center"
+            className={stylesLinkActive(!categoryParams)}
           >
             Tudo
           </Link>
           {categories.map(category => {
+            const isCategoryActive = categoryParams?.includes(category.slug)
+            const href = isCategoryActive ? baseUrl : `${baseUrl}${!categoryParams ? '?' : '&'}category=${category.slug}`
+
             return (
               <Link
-                key={category.id}
-                href={`/app/explore?category=${category.name}`}
+                key={category.slug}
+                href={href}
                 prefetch={false}
-                className="px-4 py-1 text-purple-100 border border-purple-100 rounded-full flex items-center justify-center"
+                className={stylesLinkActive(isCategoryActive)}
               >
                 {category.name}
               </Link>
@@ -91,19 +97,12 @@ export default async function Books() {
         <div className="mt-12 flex gap-5 flex-wrap">
           {books.map(book => {
             return (
-              <div key={book.id} className="w-80 bg-gray-700 rounded-lg px-5 py-4 flex gap-5">
-                <Image 
-                  src={book.cover_url}
-                  alt=""
-                  className="rounded"
-                  width={107}
-                  height={150}
+              <div key={book.id} className="w-80">
+                <Book 
+                  data={book}
+                  handleBookSidePanel
+                  showRatingsAmount
                 />
-                <div className="flex-1 flex flex-col">
-                  <strong className="line-clamp-2 text-lg">{book.name}</strong>
-                  <p className="text-sm text-gray-400">{book.author}</p>
-                  <RateStars rate={book.rate_average} className="mt-auto" />
-                </div>
               </div>
             )
           })}
