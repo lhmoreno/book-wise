@@ -9,15 +9,13 @@ const nunitoSans = Nunito_Sans({
   subsets: ['latin'] 
 })
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({children}: React.PropsWithChildren) {
   return (
     <html lang="pt-BR">
-      <body className={`${nunitoSans.className} __className_df4bbc bg-gray-800 text-gray-100`}>
-        {children}
+      <body className={`${nunitoSans.className} bg-gray-800 text-gray-100`}>
+        <div className="max-w-screen-2xl mx-auto">
+          {children}
+        </div>
       </body>
     </html>
   )
